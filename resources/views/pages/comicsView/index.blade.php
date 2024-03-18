@@ -14,7 +14,7 @@
             >
                 <thead>
                     <tr>
-                        {{-- <th scope="col">id</th> --}}
+                        <th scope="col">id</th>
                         <th scope="col">title</th>
                         <th scope="col">description</th>
                         <th scope="col">thumb</th>
@@ -27,8 +27,8 @@
                     @foreach ($comics as $item)
                         
                     <tr class="">
-                        {{-- <td>{{$item->id}}</td> --}}
-                        <td>{{$item['title']}}</td>
+                        <td>{{$item['id']}}</td>
+                        <td><a href="{{ route('comics.show', ['comic' => $item['id'] ] ) }}">{{$item['title']}}</a></td>
                         <td>{{$item['description']}}</td>
                         <td>{{$item['thumb']}}</td>
                         <td>{{$item['price']}}</td>
