@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Models\Comic;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -38,7 +39,9 @@ class ComicsController extends Controller
      */
     public function show(string $id)
     {
-        // $comic = Comic::find($id);
+        $comic = Comic::find($id);
+
+        return view('pages.comicsView.show', compact('comic'));
     }
 
     /**
