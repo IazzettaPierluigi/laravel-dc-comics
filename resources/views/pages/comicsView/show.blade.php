@@ -4,4 +4,5 @@
 
 @section ('main')
 <h2>show page</h2>
+{{ dd ($comic)}}
 @endsection
