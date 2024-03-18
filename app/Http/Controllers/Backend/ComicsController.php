@@ -14,7 +14,7 @@ class ComicsController extends Controller
     {
         $comics = config('comics');
 
-        return view('pages.welcome', compact('comics'));
+        return view('pages.comicsView.index', compact('comics'));
     }
 
     /**
