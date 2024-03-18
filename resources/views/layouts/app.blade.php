@@ -17,11 +17,10 @@
         @include('components.header')
     </header>
 
-    <main>
-        <div>
-            @yield('content')
+    
+            @yield('main')
         </div>
-    </main>
+    
 </body>
 
 </html>

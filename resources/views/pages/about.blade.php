@@ -1,10 +1,10 @@
-@extends('layouts.basic')
+@extends('layouts.app')
 
 @section('title', 'Benvenuto | About')
 
 
 
-@section('content')
+@section('main')
     <h1 class="bg-black">Pagina di about</h1>
 
    
