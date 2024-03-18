@@ -13,9 +13,7 @@
 </head>
 
 <body>
-    <header>
-        @include('components.header')
-    </header>
+    
 
     
             @yield('main')

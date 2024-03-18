@@ -9,6 +9,15 @@
         <div
             class="table-responsive"
         >
+        <a
+            name=""
+            id=""
+            class="btn btn-primary"
+            href="{{ route('comics.create') }}"
+            role="button"
+            >Crea</a
+        >
+        
             <table
                 class="table table-primary"
             >
@@ -21,6 +30,7 @@
                         <th scope="col">price</th>
                         <th scope="col">series</th>
                         <th scope="col">sale date</th>
+                        <th scope="col">edit</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,6 +44,14 @@
                         <td>{{$item['price']}}</td>
                         <td>{{$item['series']}}</td>
                         <td>{{$item ['sale_date']}}</td>
+                        <td>
+                            <button class="btn btn-primary ">
+                                edit
+                            </button>
+                            <button class="btn btn-danger ">
+                                delete
+                            </button>
+                        </td>
                     </tr>
                     @endforeach
                     
