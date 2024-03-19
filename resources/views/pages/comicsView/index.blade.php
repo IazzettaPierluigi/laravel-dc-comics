@@ -45,9 +45,13 @@
                         <td>{{$item['series']}}</td>
                         <td>{{$item ['sale_date']}}</td>
                         <td>
+                            <a href="{{ route('comics.edit', $item->id) }}" class="btn btn-primary">
+                            edit
+                            </a>
+{{-- 
                             <button class="btn btn-primary ">
                                 edit
-                            </button>
+                            </button> --}}
 
                             <form action="{{ route('comics.destroy', $item->id) }}"
                                 method="POST">
