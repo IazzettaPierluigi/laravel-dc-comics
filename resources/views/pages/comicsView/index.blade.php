@@ -48,9 +48,19 @@
                             <button class="btn btn-primary ">
                                 edit
                             </button>
-                            <button class="btn btn-danger ">
-                                delete
-                            </button>
+
+                            <form action="{{ route('comics.destroy', $item->id) }}"
+                                method="POST">
+                                
+                                @csrf
+                                @method('DELETE')
+
+                                <button 
+                                type="submit"
+                                class="btn btn-danger ">
+                                    delete
+                                </button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
