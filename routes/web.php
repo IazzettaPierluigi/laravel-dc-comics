@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'index'])->name('homePage');
+Route::get('/', [ComicsController::class, 'index'])->name('homePage');
 
 Route::resource('comics', ComicsController::class);
 
