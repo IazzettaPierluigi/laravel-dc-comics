@@ -17,6 +17,7 @@
                 class="form-control"
                 name="title" {{-- deve essere identico al nome della colonna che salverà il dato --}}
                 id="title"
+                value="{{ old('title') ?? $comic->title }}"
             />
   
         </div>
@@ -27,6 +28,7 @@
                 class="form-control"
                 name="description" {{-- deve essere identico al nome della colonna che salverà il dato --}}
                 id="description"
+                value="{{ old('description') ?? $comic->description }}"
             />
   
         </div>
@@ -38,6 +40,7 @@
                 class="form-control"
                 name="thumb" {{-- deve essere identico al nome della colonna che salverà il dato --}}
                 id="thumb"
+                value="{{ old('thumb') ?? $comic->thumb }}"
             />
   
         </div>
@@ -49,6 +52,7 @@
                 class="form-control"
                 name="price" {{-- deve essere identico al nome della colonna che salverà il dato --}}
                 id="price"
+                value="{{ old('price') ?? $comic->price }}"
             />
   
         </div>
@@ -60,6 +64,7 @@
                 class="form-control"
                 name="series" {{-- deve essere identico al nome della colonna che salverà il dato --}}
                 id="series"
+                value="{{ old('series') ?? $comic->series }}"
             />
   
         </div>
@@ -71,6 +76,7 @@
                 class="form-control"
                 name="sale_date" {{-- deve essere identico al nome della colonna che salverà il dato --}}
                 id="sale_date"
+                value="{{ old('sale_date') ?? $comic->sale_date }}"
             />
   
         </div>
