@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use Illuminate\Validation\Rule;
 use App\Models\Comic;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -34,7 +35,25 @@ class ComicsController extends Controller
 
         //validation
         $request->validate([
-            'title' => 'required',
+            'title' => 'required|string',
+            'description' => 'required|string',
+            'thumb' => [
+                'required',
+                'string',
+                Rule::requiredIf(function () use ($request) {
+                    // Richiedi "https://" solo se il campo thumb è stato fornito
+                    return !empty($request->thumb);
+                }),
+                function ($attribute, $value, $fail) {
+                    // Verifica se l'URL inizia con "https://"
+                    if (strpos($value, 'https://') !== 0) {
+                        $fail('Il campo Thumb deve iniziare con "https://".');
+                    }
+                },
+            ],
+            'price' => 'required|numeric',
+            'series' => 'required|string',
+            'sale_date' => 'required|date',
         ]);
 
 

@@ -80,7 +80,7 @@
         <div class="mb-3">
             <label for="title" class="form-label">sale date</label>
             <input
-                type="text"
+                type="date"
                 class="form-control"
                 name="sale_date" {{-- deve essere identico al nome della colonna che salverà il dato --}}
                 id="sale_date"
